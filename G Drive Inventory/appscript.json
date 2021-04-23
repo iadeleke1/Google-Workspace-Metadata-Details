@@ -1,0 +1,52 @@
+{
+  "addOns": {
+    "common": {
+      "homepageTrigger": {
+        "runFunction": "onDefaultHomePageOpen",
+        "enabled": true
+      },
+      "layoutProperties": {
+        "primaryColor": "#ff392b",
+        "secondaryColor": "#d68617"
+      },
+      "logoUrl": "https://ssl.gstatic.com/docs/script/images/logo/script-64.png",
+      "name": "G Drive List Folders, SubFolders and FIles Add-on",
+      "universalActions": [
+        {
+          "label": "Open Settings",
+          "runFunction": "onDefaultHomePageOpen"
+        }
+      ]
+    },
+    "drive": {
+      "homepageTrigger": {
+        "runFunction": "onDefaultHomePageOpen",
+        "enabled": true
+      }
+    }
+  },
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Drive",
+        "version": "v2",
+        "serviceId": "drive"
+      },
+      {
+        "userSymbol": "Sheets",
+        "version": "v4",
+        "serviceId": "sheets"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/documents.currentonly",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/presentations.currentonly",
+    "https://www.googleapis.com/auth/drive.readonly"
+
+  ]
+}
