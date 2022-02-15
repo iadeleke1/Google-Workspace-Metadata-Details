@@ -14,3 +14,8 @@ Note: This script can run forever, depending on how many files and folders to tr
 
 To do: 
 Create a UI that is acceptable. 
+
+
+References: 
+https://www.labnol.org/code/19923-google-drive-files-list
+https://developers.google.com/apps-script/reference/spreadsheet
