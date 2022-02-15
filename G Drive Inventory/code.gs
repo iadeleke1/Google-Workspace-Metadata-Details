@@ -5,7 +5,8 @@ var total_files = 0;
 var time = 0;
 var table = [];
 
-var sheet = SpreadsheetApp.openById('1D3I7xj2rymmSwSyPEGiZSef5HLVOaBYkYB87ph4Ffqk').getActiveSheet();
+//Include the spreadsheet ID here
+var sheet = SpreadsheetApp.openById('').getActiveSheet();
 var row = 1;
 var col = 1;
 var start = new Date();
@@ -21,7 +22,6 @@ function generateFolderTree() {
 
     getChildFolders(parentFolder);
 
-    //test_sheet = SpreadsheetApp.openById('1OjKZB0otTIW3qCH9uoosA4xGaa16fKeBpm51GaWUlS0').getActiveSheet();
     for(var i = 0; i < table.length; i++){
       for(var j = 0; j < 17; j++){
         sheet.getRange(i+2, j+1).setValue(table[i][j]).setWrap(true);
@@ -124,7 +124,9 @@ function getChildFolders(parent) {
 }
 
 function write_to_spreadsheet(){
-  var sheet = SpreadsheetApp.openById('1D3I7xj2rymmSwSyPEGiZSef5HLVOaBYkYB87ph4Ffqk').getActiveSheet();
+  //Include the spreadsheet ID here
+
+  var sheet = SpreadsheetApp.openById('').getActiveSheet();
   sheet.clear();
   sheet.getRange(1,1).setValue('Folder Name').setWrap(true);
   sheet.getRange(1,2).setValue('Folder Owner').setWrap(true);
